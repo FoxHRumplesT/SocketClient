@@ -6,11 +6,15 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { MessageComponent } from './components/chat/message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    ChatComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

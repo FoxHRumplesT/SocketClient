@@ -1,0 +1,22 @@
+@import '../../../../styles/mixins.sass'
+@import '../../../../styles/variables.sass'
+
+.wrapper
+  +flexbox()
+  +align-items(center)
+  +justify-content(flex-end)
+  margin-bottom: 10px
+  .message
+    padding: 5px
+    font-family: $ff-n
+    border-radius: 4px
+    background-color: $blue
+  .photo
+    min-width: 40px
+    figure
+      width: 30px
+      height: 30px
+      margin-left: 10px
+      img
+        width: 100%
+        height: 100%

@@ -1,0 +1,21 @@
+@import '../../../styles/mixins.sass'
+@import '../../../styles/variables.sass'
+
+footer
+  +flexbox()
+  +align-items(center)
+  +justify-content(center)
+  bottom: 0
+  width: 100%
+  height: 50px
+  color: white
+  position: fixed
+  text-align: center
+  font-family: $ff-b
+  background-color: black
+  .success, .danger
+    margin-left: 10px
+  .success
+    color: green
+  .danger
+    color: red
