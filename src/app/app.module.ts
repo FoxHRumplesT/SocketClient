@@ -7,6 +7,9 @@ import { environment as ENV } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { ChatModule } from './modules/chat/chat.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { MessagesModule } from './modules/messages/messages.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserModule,
     ChatModule,
     SharedModule,
-    SocketIoModule.forRoot({ url: ENV.webSocketServer, options: {} })
+    AuthModule,
+    MessagesModule,
+    SocketIoModule.forRoot({ url: ENV.webSocketServer, options: {} }),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
