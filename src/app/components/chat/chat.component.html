@@ -8,19 +8,21 @@
   </div>
 
   <div class="messages">
-    <app-message></app-message>
-    <app-message></app-message>
-    <app-message></app-message>
-    <app-message></app-message>
+    <app-message *ngFor="let message of messages" [message]="message"></app-message>
   </div>
 
-  <div class="inputs">
+  <form [formGroup]="form"  class="inputs">
     <div class="text">
-      <input type="text" name="message" id="message-box" placeholder="Escribe acá">
+      <input type="text"
+             autofocus
+             id="message-box"
+             placeholder="Escribe acá"
+             formControlName="message"
+             (keydown.enter)="sentMessage()">
     </div>
     <div class="others">
       <i class="icon-upload-image"></i>
-      <i class="icon-sent"></i>
+      <i class="icon-sent" (click)="sentMessage()"></i>
     </div>
-  </div>
+  </form>
 </div>
