@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription, Observable } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Subscription, Observable } from 'rxjs';
 
-import { Message } from '../../Interfaces/Message';
+import { Message } from '../../entities/message';
 import { ChatService } from '../../services/chat.service';
 
 @Component({

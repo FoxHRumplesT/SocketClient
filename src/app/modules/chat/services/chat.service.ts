@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { SocketService } from './socket.service';
-import { Message } from '../Interfaces/Message';
+import { SocketService } from 'src/app/services/socket.service';
+import { Message } from '../entities/message';
 
 @Injectable({
   providedIn: 'root'
