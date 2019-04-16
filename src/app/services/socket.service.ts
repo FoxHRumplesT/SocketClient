@@ -13,7 +13,7 @@ export class SocketService {
     this.socketStatus();
   }
 
-  public emit(event: string, payload?: any, callback?: typeof Function): void {
+  public emit(event: string, payload?: any, callback?: Function): void {
     this.socket.emit(event, payload, callback);
   }
 

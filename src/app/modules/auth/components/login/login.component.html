@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div class="wrapper">
+  <h2 class="title">Login</h2>
+  <form [formGroup]="form" (submit)="onSubmit()" class="form">
+    <div class="item">
+      <label for="name">Nombre</label>
+      <input type="text"
+             formControlName="name"
+             id="name"
+             placeholder="Law">
+    </div>
+    <div class="item">
+      <button type="submit"
+              [disabled]="form.invalid">Ingresar</button>
+    </div>
+  </form>
+</div>
